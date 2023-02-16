@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /*
- * main function that prints with proper grammar.
+ * main - Entry point
+ * Description: C programming
  *
  * @return 0 on success
  */
