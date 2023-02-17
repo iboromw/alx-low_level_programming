@@ -1,12 +1,14 @@
-/**my first c task**/
+/* main first c task */
 
 #include <stdio.h>
 
-/*
- * main - Entry point
- * Description: C programming
+/**
+ * main - Entry point.
  *
- * @return 0 on success
+ * Description: Please work.
+ *
+ * @return 0 on success.
+ *
  */
 
 int main(void)
