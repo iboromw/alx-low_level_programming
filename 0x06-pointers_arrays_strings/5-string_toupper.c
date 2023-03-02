@@ -1,4 +1,4 @@
-#include "bootcamp.h"
+#include "main.h"
 /**
  * string_toupper - converts string lowercase letters to uppercase
  * @s: input string to be converted
