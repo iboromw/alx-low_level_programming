@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+void print_number(int n);
 char *rot13(char *);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
