@@ -3,6 +3,8 @@
 
 /**
  * add_nodeint_end - add node to end of list
+ * @head: head node
+ * @n: node data
  * Return: new node
  */
 
