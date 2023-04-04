@@ -3,31 +3,52 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - print list
- * @head: head node
- * Return: amount of nodes in list
+ * find_listint_loop_pl - linked list
+ *
+ * @head: main
+ *
+ * Return: Return at success
+ */
+
+listint_t *find_listint_loop_pl(listint_t *head)
+{
+listint_t *ptr, *last;
+if (head == NULL)
+return (NULL);
+for (last = head->next; last != NULL; last = last->next)
+{
+if (last == last->next)
+return (last);
+for (ptr = head; ptr != last; ptr = ptr->next)
+if (ptr == last->next)
+return (last->next);
+}
+return (NULL);
+}
+
+/**
+ * print_listint_safe - print
+ *
+ * @head: main
+ *
+ * Return: Return at success
  */
 
 size_t print_listint_safe(const listint_t *head)
 {
-int size = 0, i;
-const listint_t *tmp[100];
-if (!head)
-exit(98);
-while (head)
+size_t len = 0;
+int safe;
+listint_t *safer;
+safer = find_listint_loop_pl((listint_t *) head);
+for (len = 0, safe = 1; (head != safer || safe) && head != NULL; len++)
 {
-for (i = 0; i < size; i++)
-{
-if (tmp[i] == head)
-{
-printf("-> [%p] %d\n", (void *)head, head->n);
-return (size);
-}
-}
-printf("[%p] %d\n", (void *)head, head->n);
-tmp[size] = head;
-size++;
+printf("[%p] %d\n", (void *) head, head->n);
+if (head == safer)
+safe = 0;
 head = head->next;
 }
-return (size);
+
+if (safer != NULL)
+printf("-> [%p] %d\n", (void *) head, head->n);
+return (len);
 }
