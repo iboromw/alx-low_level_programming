@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "lists.h"
 
-/**
- * @head: main
- * turtle - prints before main
- * 
+/*
+ *
+ * @turtle: prints before main
+ * description: prints before main
  */
 
 void __attribute__ ((constructor)) turtle()
